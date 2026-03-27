@@ -72,4 +72,46 @@ while True:
 print("The sum of the numbers is:", sum(numbers))
 
 #TASK 4
-#Ask the user for a maximum
+#Ask the user for a maximum number, generate a random number between 0 and their number , print the result
+#Ask the user to play again
+
+import random
+
+print(random.random())
+print(random.randint(0, 100))
+
+def start_game():
+    while True:
+        try:
+            user_max = int(input("Enter a maximum number: "))
+            result = random.randint(0, user_max)
+            print("The random number is:", result)
+
+        except ValueError:
+            print("Please enter a valid number.")
+            continue
+        play_again = input("Do you want to play again? (y/n): ")
+        if play_again.lower() != 'y':
+            print("Thanks for playing!")
+            break
+start_game()
+
+#TASK 5
+#Generate 10 random numbers, if they are even print "right" and if they're odd print "left"
+#Print how many right vs left we got
+
+import random
+right = 0
+left= 0
+
+for x in range(10):
+    num = random.randint(1, 100)
+
+    if num % 2 == 0:
+        print(f"{num} is even: right")
+        right += 1
+    else:
+        print(f"{num} is odd: left")
+        left += 1
+
+print(f"\n Results -> Right: {right}, Left: {left}")
