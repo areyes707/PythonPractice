@@ -36,7 +36,7 @@ print(age)
 #Convert text to uppercase, print the result
 
 text = input("Enter some text: ")
-print(text.upper())
+print(text.upper()) #changes text to uppercase
 
 #.upper()
 
@@ -46,7 +46,7 @@ print(text.upper())
 num1 = (input("Enter the first number: "))
 num2 = (input("Enter the second number: "))
 
-while not num1.isdigit() or not num2.isdigit():
+while not num1.isdigit() or not num2.isdigit(): #ensures both inputs are numbers
     print("Please enter valid numbers.")
     num1 = input("Enter the first number: ")
     num2 = input("Enter the second number: ")
@@ -61,7 +61,7 @@ print(sum_result)
 
 numbers = []
 while True:
-    num = input("Enter a number (or type 'done' to finish): ")
+    num = input("Enter a number (or type 'done' to finish): ") #urges user to enter a number or type 'done' to finish
     if num.lower() == 'done':
         break
     elif not num.isdigit():
@@ -69,7 +69,7 @@ while True:
     else:
         numbers.append(float(num))
 
-print("The sum of the numbers is:", sum(numbers))
+print("The sum of the numbers is:", sum(numbers)) #adds all the numbers in the list and prints the result
 
 #TASK 4
 #Ask the user for a maximum number, generate a random number between 0 and their number , print the result
@@ -77,7 +77,7 @@ print("The sum of the numbers is:", sum(numbers))
 
 import random
 
-print(random.random())
+print(random.random()) #generates a random number between 0 and 1
 print(random.randint(0, 100))
 
 def start_game():
@@ -87,7 +87,7 @@ def start_game():
             result = random.randint(0, user_max)
             print("The random number is:", result)
 
-        except ValueError:
+        except ValueError: #ensures the user enters a number
             print("Please enter a valid number.")
             continue
         play_again = input("Do you want to play again? (y/n): ")
